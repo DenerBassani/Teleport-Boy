@@ -4,5 +4,6 @@ right = 0;
 left = 0;
 
 hspd = 0;
+vspd = 0;
 
 spd = 3;
