@@ -4,9 +4,23 @@
 
 	right = keyboard_check(ord("D"));
 	left = keyboard_check(ord("A"));
+	up = keyboard_check(ord("W"));
 
 	hspd = (right - left ) * spd;
 
+#endregion
+
+#region Gravity and Jump
+	
+	if !place_meeting(x,y+1,obj_wall){
+		vspd += grv;	
+	}
+	else{
+		if up {
+			vspd = -jump_spd;	
+		}
+	}
+	
 #endregion
 
 #region Collision Horizontal
@@ -31,6 +45,5 @@
 
 #endregion
 
-
-
 x+= hspd;
+y+= vspd;
