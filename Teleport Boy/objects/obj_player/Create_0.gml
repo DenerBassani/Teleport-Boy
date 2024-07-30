@@ -4,6 +4,7 @@ right = 0;
 left = 0;
 up = 0;
 down = 0;
+dash = 0;
 
 jump = 0;
 ground = 0;
@@ -11,10 +12,14 @@ on_ladder = 0;
 
 hspd = 0;
 vspd = 0;
-spd = 2;
+spd = 4;
 
-grv = 0.09;
+grv = 0.1;
 jump_spd = 3.5;
+
+dash_spd = 6;
+dash_duration = 30;
+dash_timer = 0
 
 facing = 1;
 xscale = 1;
