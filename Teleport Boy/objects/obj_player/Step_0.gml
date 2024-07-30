@@ -58,6 +58,7 @@ switch (state) {
 
     #region Fall
     case "fall":
+	
         if (!place_meeting(x, y + 1, obj_block)) {
             vspd += grv;
         } else {
@@ -86,16 +87,19 @@ switch (state) {
 
     #region Wall Slide
     case "wall_slide":
-        vspd = slide_spd;
+        vspd = slide_spd; // Define a velocidade de deslizar
 
+        // Permitir movimento horizontal enquanto desliza na parede
         if (right || left) {
-            hspd = (right - left) * slide_spd;
+            state = "move"
+        } else {
+            hspd = 0; // Parar movimento horizontal se não estiver pressionando as teclas
         }
 
         if (up && can_wall_jump) {
             vspd = -jump_spd * 0.5; // Pulo mais sutil
-            hspd = -facing * jump_spd * 0.5;
-            can_wall_jump = false;
+            hspd = -facing * jump_spd * 0.5; // Pulo mais sutil na direção oposta
+            can_wall_jump = false; // Impede múltiplos pulos na mesma parede
             state = "fall";
         }
         break;
