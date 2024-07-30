@@ -1,21 +1,23 @@
-/// @description Insert description here
-// You can write your code in this editor
-right = 0; // Control Right
-left = 0; // Control Left
-up = 0; //Control Jump
-dash = 0; // Control Dash
+// Control Variables
+right = 0;
+left = 0;
+up = 0;
+dash = 0;
+facing = 1; // 1 = Right, -1 = Left
 
-grv = 0.09; //Gravity
+// Movement Variables
+grv = 0.5; // Gravidade
+hspd = 0; // Velocidade horizontal
+vspd = 0; // Velocidade vertical
+jump_spd = 15; // Velocidade de pulo
+spd = 5; // Velocidade de movimento
 
-hspd = 0; // Horizontal Speed
-vspd = 0; // Vertical Speed
-jump_spd = 3; // Jump Speed
-spd = 5; // Move Speed
+dash_spd = 15; // Velocidade do dash
+dash_duration = 15; // Duração do dash
+dash_timer = 0; // Temporizador do dash
 
-dash_spd = 15; // Dash Speed
-dash_duration = 15; // Duration Dash
-dash_timer = 0; // Timer Dash
+slide_spd = 2; // Velocidade de deslizar
+can_wall_jump = false; // Se é possível pular da parede
 
-facing = 1;// 1 = Right or -1 = Left;
-
-state = "idle";
+// Estado do jogo
+state = "idle"; // Estado inicial
