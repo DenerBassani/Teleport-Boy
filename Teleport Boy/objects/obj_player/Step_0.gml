@@ -19,7 +19,7 @@ if (right) {
 }
 
 switch(state){
-	
+	#region Idle
 	case "idle":
 		if ( right || left ){
 			state = "walk";
@@ -40,7 +40,9 @@ switch(state){
 		}
 	
 	break;
+	#endregion
 	
+	#region Walk
 	case "walk":
 		
 		if (!right && !left ){
@@ -62,7 +64,9 @@ switch(state){
 		}
 		
 	break;
+	#endregion
 	
+	#region Fall
 	case "fall":
 		vspd += grv;
 		if( ground ){
@@ -80,7 +84,9 @@ switch(state){
 		}
 		
 	break;
+	#endregion
 	
+	#region Jump
 	case "jump":
 		vspd = -jump_spd;
 		if( ground ){
@@ -100,7 +106,9 @@ switch(state){
 		}
 		
 	break;
+	#endregion
 	
+	#region Climb
 	case "climb":
 		vspd = 0; // Desativar a gravidade enquanto estiver na escada
         //hspd = 0; // Desativar a velocidade horizontal enquanto estiver na escada
@@ -123,7 +131,9 @@ switch(state){
 		}
 		
 	break;
+	#endregion
 	
+	#region Dash
 	case "dash":
         hspd = facing * dash_spd;
         dash_timer--;
@@ -132,5 +142,14 @@ switch(state){
             state = "fall";
         }
 	break;
+	#endregion
+	
+	#region Death
+	case "death":
+	
+		
+	
+	break;
+	#endregion
 }
 
