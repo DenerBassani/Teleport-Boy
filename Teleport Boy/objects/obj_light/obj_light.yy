@@ -30,8 +30,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_light_1",
-    "path":"sprites/spr_light_1/spr_light_1.yy",
+    "name":"spr_torch",
+    "path":"sprites/spr_torch/spr_torch.yy",
   },
   "spriteMaskId":null,
   "visible":true,

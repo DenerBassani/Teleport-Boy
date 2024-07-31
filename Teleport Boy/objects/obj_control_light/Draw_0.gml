@@ -13,8 +13,8 @@ if ( !surface_exists(surf)){
 	
 	with(obj_light)
 	{
-		
-		draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,image_yscale,image_angle,c_white,1);
+		var _valor = random_range(-.2,.2);
+		draw_sprite_ext(spr_light_1,image_index,x,y,1.5+_valor,1.5+_valor,image_angle,c_white,1);
 		
 	}
 	
