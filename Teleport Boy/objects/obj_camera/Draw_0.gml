@@ -6,3 +6,4 @@ camera_set_proj_mat(_camera, matrix_build_projection_perspective_fov(60, window_
 camera_apply(_camera);
 
 vertex_submit(vbuffer,pr_trianglelist,-1);
+
