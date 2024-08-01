@@ -14,8 +14,8 @@ hspd = 0;
 vspd = 0;
 spd = 4;
 
-grv = 0.1;
-jump_spd = 3.5;
+grv = 0.25;
+jump_spd = 5;
 
 dash_spd = 6;
 dash_duration = 30;
