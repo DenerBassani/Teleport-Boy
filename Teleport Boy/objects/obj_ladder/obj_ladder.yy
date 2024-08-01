@@ -6,8 +6,8 @@
   "name":"obj_ladder",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"Platform",
+    "path":"folders/Objects/Platform.yy",
   },
   "parentObjectId":null,
   "persistent":false,
